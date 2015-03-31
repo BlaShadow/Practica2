@@ -33,6 +33,8 @@ public class ListAdapter extends ArrayAdapter<Post> {
         title.setText(itemPost.title);
         details.setText(itemPost.details);
 
+        rootView.setTag(itemPost);
+
         return  rootView;
     }
 

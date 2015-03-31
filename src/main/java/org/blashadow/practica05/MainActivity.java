@@ -2,6 +2,7 @@ package org.blashadow.practica05;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.StrictMode;
@@ -10,6 +11,8 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.activeandroid.query.Select;
@@ -41,11 +44,29 @@ public class MainActivity extends Activity {
 
         lv.setAdapter(adapter);
 
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Activity context = MainActivity.this;
+
+                Intent tmpIntent = new Intent(context,Detalle.class);
+
+                tmpIntent.putExtra("idpost", ((Post)view.getTag()).getId() );
+
+                context.startActivity(tmpIntent);
+            }
+        });
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
 
         getData();
+    }
+
+    public void salida(View V){
+        finish();
+
     }
 
     public void getData(){

@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.blashadow.practica05.Detalle">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/title"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/details"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comentario"
+        android:id="@+id/add_comment"/>
+
+    <Button android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="crearComentario"
+        android:text="Crear comentario"/>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:id="@+id/comentarios_lv"
+            
+        android:layout_height="fill_parent"/>
+
+</LinearLayout>

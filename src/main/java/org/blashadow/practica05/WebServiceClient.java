@@ -111,6 +111,7 @@ public class WebServiceClient {
 
                 postItem.title = item.getString("title");
                 postItem.details = item.getString("content").substring(0,30);
+                //postItem.date = item.getString("Date");
 
                 result.add(postItem);
             }

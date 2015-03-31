@@ -5,6 +5,7 @@
     android:padding="20dp"
     android:background="@android:color/darker_gray">
 
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:id="@+id/details_post" />
 
         </LinearLayout>
